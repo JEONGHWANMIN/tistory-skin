@@ -20,7 +20,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
   </head>
-  <body class="dark-mode">
+  <body id="[##_body_id_##]">
     <div class="container">
       <!-- Left Sidebar -->
       <aside class="sidebar">
@@ -34,7 +34,7 @@
           </div>
           <div class="profile-info">
             <h2>[##_blogger_##]</h2>
-            <p>[##_blog_description_##]</p>
+            <p>[##_desc_##]</p>
           </div>
         </div>
 
@@ -62,132 +62,70 @@
           </div>
         </header>
 
-        <!-- Post List -->
+        <!-- 글 리스트 -->
         <s_list>
-          <div class="post-container">
-            <s_article_rep>
-              <article class="post-card">
-                <div class="post-thumbnail">
-                  [##_article_rep_thumbnail_link_##]
-                </div>
-                <div class="post-content">
-                  <h2>
-                    <a href="[##_article_rep_link_##]"
-                      >[##_article_rep_title_##]</a
-                    >
-                  </h2>
-                  <div class="post-meta">
-                    <span class="date">[##_article_rep_date_##]</span>
-                    <span class="category">[##_article_rep_category_##]</span>
-                  </div>
-                  <p class="excerpt">[##_article_rep_summary_##]</p>
-                  <div class="post-stats">
-                    <span
-                      ><i class="fas fa-eye"></i>
-                      [##_article_rep_views_##]</span
-                    >
-                    <span
-                      ><i class="fas fa-comment"></i>
-                      [##_article_rep_comment_count_##]</span
-                    >
-                  </div>
-                </div>
-              </article>
-            </s_article_rep>
-          </div>
-          <div class="pagination">
-            <div class="pagination-wrapper">[##_article_rep_paging_##]</div>
+          <div class="searchList [##_list_style_##]">
+            <div <s_list_image>style="background-image:url('[##_list_image_##]')"</s_list_image>>
+              <h3>'[##_list_conform_##]'에 해당되는 글 [##_list_count_##]건</h3>
+              <p>[##_list_description_##]</p>
+            </div>
+            <ol>
+              <s_list_rep>
+                <li class="post-item">
+                  <a href="[##_list_rep_link_##]">
+                    <div class="post-thumbnail">
+                      <img src="[##_list_rep_thumbnail_##]" alt="Thumbnail" onerror="this.src='./images/default-thumbnail.png'">
+                    </div>
+                    <div class="post-content">
+                      <span class="post-category">[##_list_rep_category_##]</span>
+                      <h4>[##_list_rep_title_##]</h4>
+                      <p class="post-summary">[##_list_rep_summary_##]</p>
+                      <div class="post-footer">
+                        <div class="post-author">
+                          <span>[##_list_rep_author_##]</span>
+                        </div>
+                        <div class="post-meta">
+                          <span class="date">[##_list_rep_regdate_##]</span>
+                          <span class="cnt">[##_list_rep_rp_cnt_##]</span>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+              </s_list_rep>
+            </ol>
           </div>
         </s_list>
 
-        <!-- Single Post -->
-        <s_article_protected>
-          <div class="protected-content">
-            <h2>[##_article_rep_title_##]</h2>
-            <p>
-              보호되어 있는 글입니다. 내용을 보시려면 비밀번호를 입력하세요.
-            </p>
-            <form action="" method="post">
-              <input type="password" name="[##_article_password_##]" />
-              <input type="submit" value="확인" />
-            </form>
+        <!-- 페이징 -->
+        <s_paging>
+          <div class="paging">
+            <a [##_prev_page_##] class="[##_no_more_prev_##]">◀ PREV </a>
+            <span class="numbox">
+              <s_paging_rep>
+                <a [##_paging_rep_link_##] class="num">[[##_paging_rep_link_num_##]]</a>
+              </s_paging_rep>
+            </span>
+            <a [##_next_page_##] class="[##_no_more_next_##]">NEXT ▶</a>
           </div>
-        </s_article_protected>
+        </s_paging>
 
+        <!-- 글 상세 -->
         <s_article_rep>
-          <div class="single-post">
-            <header class="post-header">
-              <h1>[##_article_rep_title_##]</h1>
-              <div class="post-meta">
-                <span class="date">[##_article_rep_date_##]</span>
-                <span class="category">[##_article_rep_category_##]</span>
-                <span class="author">[##_article_rep_author_##]</span>
+        <s_permalink_article_rep>
+            <div class="titleWrap">
+              <h2><a href="[##_article_rep_link_##]">[##_article_rep_title_##]</a></h2>
+              <div class="category">
+                <a href="[##_article_rep_category_link_##]">[##_article_rep_category_##]</a>
               </div>
-            </header>
-
-            <div class="post-content">[##_article_rep_desc_##]</div>
-
-            <div class="post-footer">
-              <div class="tag-list">[##_article_rep_tag_##]</div>
-
-              <div class="post-nav">
-                <div class="prev-post">[##_article_prev_##]</div>
-                <div class="next-post">[##_article_next_##]</div>
-              </div>
+              <div class="date">[##_article_rep_date_##]</div>
             </div>
-          </div>
-
-          <!-- Comments -->
-          <s_rp>
-            <div class="comments-section">
-              <h3>댓글</h3>
-              <div class="comment-form">[##_rp_input_form_##]</div>
-
-              <div class="comment-list">
-                <s_rp_container>
-                  <s_rp_rep>
-                    <div class="comment">
-                      <div class="comment-meta">
-                        <span class="name">[##_rp_name_##]</span>
-                        <span class="date">[##_rp_date_##]</span>
-                      </div>
-                      <div class="comment-content">[##_rp_desc_##]</div>
-                      <div class="comment-actions">
-                        <a href="[##_rp_reply_link_##]">답글</a>
-                        <a href="[##_rp_delete_link_##]">삭제</a>
-                        <a href="[##_rp_modify_link_##]">수정</a>
-                      </div>
-                    </div>
-                    <s_rp2_container>
-                      <s_rp2_rep>
-                        <div class="reply-comment">
-                          <div class="comment-meta">
-                            <span class="name">[##_rp_name_##]</span>
-                            <span class="date">[##_rp_date_##]</span>
-                          </div>
-                          <div class="comment-content">[##_rp_desc_##]</div>
-                          <div class="comment-actions">
-                            <a href="[##_rp_delete_link_##]">삭제</a>
-                            <a href="[##_rp_modify_link_##]">수정</a>
-                          </div>
-                        </div>
-                      </s_rp2_rep>
-                    </s_rp2_container>
-                  </s_rp_rep>
-                </s_rp_container>
-              </div>
+          
+            <div class="article">
+              [##_article_rep_desc_##]
             </div>
-          </s_rp>
-        </s_article_rep>
-
-        <!-- Guestbook -->
-        <s_guest>
-          <div class="guestbook">
-            <h2>방명록</h2>
-            <div class="guestbook-form">[##_guestbook_input_form_##]</div>
-            <div class="guestbook-list">[##_guest_container_##]</div>
-          </div>
-        </s_guest>
+        </s_permalink_article_rep>
+      </s_article_rep>
       </main>
     </div>
 
