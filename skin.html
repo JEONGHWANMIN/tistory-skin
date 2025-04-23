@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>[##_title_##]</title>
+
+    <!-- Tistory Variable CSS -->
+    <link rel="stylesheet" href="./style.css" />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Gowun+Batang:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body class="dark-mode">
+    <div class="container">
+      <!-- Left Sidebar -->
+      <aside class="sidebar">
+        <div class="blog-title">
+          <h1><a href="[##_blog_link_##]">[##_title_##]</a></h1>
+        </div>
+
+        <div class="profile">
+          <div class="profile-image">
+            <img src="[##_image_##]" alt="Profile" />
+          </div>
+          <div class="profile-info">
+            <h2>[##_blogger_##]</h2>
+            <p>[##_blog_description_##]</p>
+          </div>
+        </div>
+
+        <nav class="main-nav">[##_category_list_##]</nav>
+
+        <div class="theme-toggle">
+          <button id="themeToggle">
+            <i class="fas fa-moon"></i>
+          </button>
+        </div>
+      </aside>
+
+      <!-- Main Content Area -->
+      <main class="main-content">
+        <header class="main-header">
+          <div class="search-container">
+            <form action="[##_search_link_##]" method="get">
+              <input
+                type="text"
+                name="search"
+                placeholder="검색어를 입력하세요..."
+              />
+              <button type="submit"><i class="fas fa-search"></i></button>
+            </form>
+          </div>
+        </header>
+
+        <!-- Post List -->
+        <s_list>
+          <div class="post-container">
+            <s_article_rep>
+              <article class="post-card">
+                <div class="post-thumbnail">
+                  [##_article_rep_thumbnail_link_##]
+                </div>
+                <div class="post-content">
+                  <h2>
+                    <a href="[##_article_rep_link_##]"
+                      >[##_article_rep_title_##]</a
+                    >
+                  </h2>
+                  <div class="post-meta">
+                    <span class="date">[##_article_rep_date_##]</span>
+                    <span class="category">[##_article_rep_category_##]</span>
+                  </div>
+                  <p class="excerpt">[##_article_rep_summary_##]</p>
+                  <div class="post-stats">
+                    <span
+                      ><i class="fas fa-eye"></i>
+                      [##_article_rep_views_##]</span
+                    >
+                    <span
+                      ><i class="fas fa-comment"></i>
+                      [##_article_rep_comment_count_##]</span
+                    >
+                  </div>
+                </div>
+              </article>
+            </s_article_rep>
+          </div>
+          <div class="pagination">
+            <div class="pagination-wrapper">[##_article_rep_paging_##]</div>
+          </div>
+        </s_list>
+
+        <!-- Single Post -->
+        <s_article_protected>
+          <div class="protected-content">
+            <h2>[##_article_rep_title_##]</h2>
+            <p>
+              보호되어 있는 글입니다. 내용을 보시려면 비밀번호를 입력하세요.
+            </p>
+            <form action="" method="post">
+              <input type="password" name="[##_article_password_##]" />
+              <input type="submit" value="확인" />
+            </form>
+          </div>
+        </s_article_protected>
+
+        <s_article_rep>
+          <div class="single-post">
+            <header class="post-header">
+              <h1>[##_article_rep_title_##]</h1>
+              <div class="post-meta">
+                <span class="date">[##_article_rep_date_##]</span>
+                <span class="category">[##_article_rep_category_##]</span>
+                <span class="author">[##_article_rep_author_##]</span>
+              </div>
+            </header>
+
+            <div class="post-content">[##_article_rep_desc_##]</div>
+
+            <div class="post-footer">
+              <div class="tag-list">[##_article_rep_tag_##]</div>
+
+              <div class="post-nav">
+                <div class="prev-post">[##_article_prev_##]</div>
+                <div class="next-post">[##_article_next_##]</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Comments -->
+          <s_rp>
+            <div class="comments-section">
+              <h3>댓글</h3>
+              <div class="comment-form">[##_rp_input_form_##]</div>
+
+              <div class="comment-list">
+                <s_rp_container>
+                  <s_rp_rep>
+                    <div class="comment">
+                      <div class="comment-meta">
+                        <span class="name">[##_rp_name_##]</span>
+                        <span class="date">[##_rp_date_##]</span>
+                      </div>
+                      <div class="comment-content">[##_rp_desc_##]</div>
+                      <div class="comment-actions">
+                        <a href="[##_rp_reply_link_##]">답글</a>
+                        <a href="[##_rp_delete_link_##]">삭제</a>
+                        <a href="[##_rp_modify_link_##]">수정</a>
+                      </div>
+                    </div>
+                    <s_rp2_container>
+                      <s_rp2_rep>
+                        <div class="reply-comment">
+                          <div class="comment-meta">
+                            <span class="name">[##_rp_name_##]</span>
+                            <span class="date">[##_rp_date_##]</span>
+                          </div>
+                          <div class="comment-content">[##_rp_desc_##]</div>
+                          <div class="comment-actions">
+                            <a href="[##_rp_delete_link_##]">삭제</a>
+                            <a href="[##_rp_modify_link_##]">수정</a>
+                          </div>
+                        </div>
+                      </s_rp2_rep>
+                    </s_rp2_container>
+                  </s_rp_rep>
+                </s_rp_container>
+              </div>
+            </div>
+          </s_rp>
+        </s_article_rep>
+
+        <!-- Guestbook -->
+        <s_guest>
+          <div class="guestbook">
+            <h2>방명록</h2>
+            <div class="guestbook-form">[##_guestbook_input_form_##]</div>
+            <div class="guestbook-list">[##_guest_container_##]</div>
+          </div>
+        </s_guest>
+      </main>
+    </div>
+
+    <!-- Scripts -->
+    <script src="./script.js"></script>
+  </body>
+</html>
