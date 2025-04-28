@@ -27,6 +27,17 @@
   --shadow-sm: 0 2px 4px rgba(var(--bs-gray-800-rgb), 0.05);
   --shadow-md: 0 4px 6px rgba(var(--bs-gray-800-rgb), 0.1);
   --shadow-lg: 0 10px 15px rgba(var(--bs-gray-800-rgb), 0.1);
+
+  /* Prism.js Theme Colors */
+  --prism-bg: #282c34;
+  --prism-text: #abb2bf;
+  --prism-keyword: #c678dd;
+  --prism-string: #98c379;
+  --prism-comment: #5c6370;
+  --prism-function: #61afef;
+  --prism-number: #d19a66;
+  --prism-operator: #56b6c2;
+  --prism-punctuation: #abb2bf;
 }
 
 body {
@@ -51,7 +62,7 @@ body {
   background-color: var(--bg-secondary);
   padding: 12px;
   position: fixed;
-  width: 300px;
+  width: 250px;
   height: 100vh;
   overflow-y: auto;
   z-index: 100;
@@ -139,10 +150,10 @@ body {
 
 /* Main Content Area */
 .main-content {
-  margin-left: 300px;
+  margin-left: 250px;
   padding: 32px;
   min-height: 100vh;
-  width: calc(100vw - 300px);
+  width: calc(100vw - 250px);
   background-color: var(--bg-primary);
 }
 
@@ -402,206 +413,6 @@ body.light-mode .main-nav a:hover {
   font-size: 16px;
 }
 
-/* Post Card Hover Effect */
-.post-card:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-lg);
-}
-
-.post-link {
-  color: var(--text-color);
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
-
-.post-link:hover {
-  color: var(--primary-color);
-}
-
-/* Single Post View */
-.single-post {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-.post-header {
-  margin-bottom: 30px;
-}
-
-.post-header h1 {
-  margin: 20px 0;
-  font-size: 2.5em;
-  line-height: 1.3;
-}
-
-/* Post Content Typography */
-.post-content {
-  font-size: 1.1em;
-  line-height: 1.8;
-  color: var(--text-color);
-}
-
-.post-content p {
-  margin-bottom: 1.5em;
-}
-
-.post-content img {
-  max-width: 100%;
-  height: auto;
-  margin: 2em 0;
-  border-radius: 8px;
-}
-
-.tag-list {
-  margin-bottom: 20px;
-}
-
-.post-nav {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 30px;
-  padding-top: 20px;
-  border-top: 1px solid var(--border-color);
-}
-
-/* 글 리스트 스타일 */
-.searchList {
-  margin-bottom: var(--spacing-xl);
-  padding: var(--spacing-lg);
-}
-
-.searchList h3 {
-  font-family: var(--font-heading);
-  margin-bottom: var(--spacing-lg);
-  color: var(--text-primary);
-}
-
-.searchList p {
-  color: var(--text-secondary);
-  margin-bottom: var(--spacing-lg);
-}
-
-.searchList ol {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
-  list-style: none;
-}
-
-.searchList li {
-  background-color: #ffffff;
-  border-radius: 16px;
-  overflow: hidden;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
-  height: 450px;
-}
-
-.searchList li:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-}
-
-.searchList li a {
-  color: #333333;
-  text-decoration: none;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-
-.post-category {
-  background-color: #ffe974;
-  color: #333333;
-  border-radius: 50px;
-  font-size: 12px;
-  margin: 0;
-  padding: 2px 8px;
-  display: table-cell;
-  vertical-align: middle;
-}
-
-.searchList li h4 {
-  font-size: 15px;
-  font-weight: 500;
-  letter-spacing: -0.5px;
-  height: 30px;
-  display: flex;
-  align-items: center;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  margin-top: 12px;
-}
-
-.searchList li p {
-  font-size: 12px;
-  margin: 8px 0 16px 0;
-  color: rgb(70 68 68 / 70%);
-  overflow: hidden;
-  line-height: 1.8;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
-  text-overflow: ellipsis;
-}
-
-.post-author {
-  display: flex;
-  align-items: center;
-  font-size: 80%;
-}
-
-.post-author img {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-.post-meta {
-  display: flex;
-  align-items: center;
-  font-size: 90%;
-}
-
-.searchList .date {
-  color: #888888;
-  font-size: 80%;
-}
-
-.searchList .cnt {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  color: #888888;
-  font-size: 80%;
-}
-
-.searchList .cnt::before {
-  content: "💬";
-}
-
-/* 반응형 스타일 */
-@media (max-width: 1200px) {
-  .searchList ol {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 768px) {
-  .searchList ol {
-    grid-template-columns: 1fr;
-  }
-
-  .searchList {
-    padding: 16px;
-  }
-}
-
 /* 페이징 스타일 */
 .paging {
   display: flex;
@@ -642,19 +453,299 @@ body.light-mode .main-nav a:hover {
   border-radius: 4px;
 }
 
-/* 티스토리 스타일 오버라이드 */
-
-.post-item .post-thumbnail {
-  width: 100%;
-  height: 100%;
+/* 글 상세 페이지 스타일 */
+.titleWrap {
+  margin-bottom: 3rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border-color);
 }
 
-.post-item .post-thumbnail img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.titleWrap h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+  color: var(--text-primary);
 }
 
-.post-item .post-content {
-  padding: 16px;
+.titleWrap h2 a {
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.titleWrap h2 a:hover {
+  color: var(--accent-color);
+}
+
+.category {
+  margin-bottom: 0.75rem;
+}
+
+.category a {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background-color: var(--bg-secondary);
+  color: var(--text-secondary);
+  text-decoration: none;
+  border-radius: 1rem;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
+.category a:hover {
+  background-color: var(--accent-color);
+  color: white;
+}
+
+.date {
+  color: var(--text-tertiary);
+  font-size: 0.9rem;
+}
+
+/* Article Content */
+.article {
+  line-height: 1.6;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+}
+
+.article p {
+  margin-bottom: 1.2rem;
+}
+
+.article img {
+  max-width: 100%;
+  height: auto;
+  margin: 1.5rem 0;
+  border-radius: 8px;
+  box-shadow: var(--shadow-md);
+}
+
+.article h1,
+.article h2,
+.article h3,
+.article h4,
+.article h5,
+.article h6 {
+  margin: 2rem 0 1.2rem;
+  color: var(--text-primary);
+  line-height: 1.3;
+}
+
+.article h1 {
+  font-size: 1.8rem;
+}
+.article h2 {
+  font-size: 1.5rem;
+}
+.article h3 {
+  font-size: 1.3rem;
+}
+.article h4 {
+  font-size: 1.1rem;
+}
+.article h5 {
+  font-size: 1rem;
+}
+.article h6 {
+  font-size: 0.9rem;
+}
+
+.article blockquote {
+  border-left: 4px solid var(--accent-color);
+  padding: 0.8rem 1.2rem;
+  margin: 1.2rem 0;
+  background-color: var(--bg-secondary);
+  border-radius: 0 8px 8px 0;
+  color: var(--text-secondary);
+}
+
+/* Code Block Styles */
+.article pre {
+  position: relative;
+  background-color: var(--prism-bg);
+  border-radius: 24px;
+  margin: 6px 0;
+  padding: 8px;
+  overflow-x: auto;
+  box-shadow: var(--shadow-md);
+}
+
+.article pre code {
+  display: block;
+  color: var(--prism-text);
+  font-family: "Fira Code", monospace;
+  font-size: 0.85em;
+  line-height: 1.4;
+  tab-size: 4;
+}
+
+.article pre.line-numbers code {
+  position: relative;
+  white-space: inherit;
+}
+
+.article pre.line-numbers .line-numbers-rows {
+  position: absolute;
+  pointer-events: none;
+  top: 1em;
+  left: 0;
+  width: 3em;
+  letter-spacing: -1px;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  user-select: none;
+}
+
+.article pre.line-numbers .line-numbers-rows > span {
+  display: block;
+  counter-increment: linenumber;
+}
+
+.article pre.line-numbers .line-numbers-rows > span:before {
+  content: counter(linenumber);
+  color: var(--prism-comment);
+  display: block;
+  padding-right: 0.8em;
+  text-align: right;
+}
+
+/* Language Label */
+.article pre[data-language]::before {
+  content: attr(data-language);
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.2em 0.8em;
+  font-size: 0.8em;
+  color: var(--prism-text);
+  background-color: rgba(255, 255, 255, 0.1);
+  border-bottom-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+/* Copy Button */
+.article pre .copy-button {
+  position: absolute;
+  top: 0.5em;
+  right: 2.5em;
+  padding: 0.2em 0.5em;
+  font-size: 0.8em;
+  color: var(--prism-text);
+  background-color: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.article pre:hover .copy-button {
+  opacity: 1;
+}
+
+.article pre .copy-button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Inline Code */
+.article code:not(pre code) {
+  background-color: var(--bg-secondary);
+  color: var(--accent-color);
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  font-family: "Fira Code", monospace;
+  font-size: 0.9em;
+}
+
+/* Dark Mode Support */
+body.dark-mode .article pre {
+  background-color: var(--prism-bg);
+}
+
+body.dark-mode .article pre code {
+  color: var(--prism-text);
+}
+
+body.dark-mode .article code:not(pre code) {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--prism-function);
+}
+
+/* Lists */
+.article ul,
+.article ol {
+  margin: 1.5rem 0;
+  padding-left: 2rem;
+}
+
+.article li {
+  margin-bottom: 0.75rem;
+}
+
+.article ul li {
+  list-style-type: disc;
+}
+
+.article ol li {
+  list-style-type: decimal;
+}
+
+/* Tables */
+.article table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+  box-shadow: var(--shadow-sm);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.article th,
+.article td {
+  border: 1px solid var(--border-color);
+  padding: 1rem;
+  text-align: left;
+}
+
+.article th {
+  background-color: var(--bg-secondary);
+  font-weight: 600;
+}
+
+.article tr:nth-child(even) {
+  background-color: var(--bg-secondary);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .titleWrap h2 {
+    font-size: 2rem;
+  }
+
+  .article {
+    font-size: 1rem;
+  }
+
+  .article h1 {
+    font-size: 1.8rem;
+  }
+  .article h2 {
+    font-size: 1.5rem;
+  }
+  .article h3 {
+    font-size: 1.3rem;
+  }
+  .article h4 {
+    font-size: 1.1rem;
+  }
+  .article h5 {
+    font-size: 1rem;
+  }
+  .article h6 {
+    font-size: 0.9rem;
+  }
+
+  .article pre {
+    padding: 1rem;
+  }
 }

@@ -7,10 +7,11 @@
 
     <!-- Tistory Variable CSS -->
     <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./images/post-list.css" />
 
     <!-- Google Fonts -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Gowun+Batang:wght@400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Gowun+Batang:wght@400;700&family=Fira+Code:wght@400;500&display=swap"
       rel="stylesheet"
     />
 
@@ -19,6 +20,15 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
+
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/atom-one-dark.min.css"
+    />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
   </head>
   <body id="[##_body_id_##]">
     <div class="container">
@@ -65,7 +75,7 @@
         <!-- 글 리스트 -->
         <s_list>
           <div class="searchList [##_list_style_##]">
-            <div <s_list_image>style="background-image:url('[##_list_image_##]')"</s_list_image>>
+            <div>
               <h3>'[##_list_conform_##]'에 해당되는 글 [##_list_count_##]건</h3>
               <p>[##_list_description_##]</p>
             </div>
@@ -74,10 +84,16 @@
                 <li class="post-item">
                   <a href="[##_list_rep_link_##]">
                     <div class="post-thumbnail">
-                      <img src="[##_list_rep_thumbnail_##]" alt="Thumbnail" onerror="this.src='./images/default-thumbnail.png'">
+                      <img
+                        src="[##_list_rep_thumbnail_##]"
+                        alt="Thumbnail"
+                        onerror="this.src='./images/default-thumbnail.png'"
+                      />
                     </div>
                     <div class="post-content">
-                      <span class="post-category">[##_list_rep_category_##]</span>
+                      <span class="post-category"
+                        >[##_list_rep_category_##]</span
+                      >
                       <h4>[##_list_rep_title_##]</h4>
                       <p class="post-summary">[##_list_rep_summary_##]</p>
                       <div class="post-footer">
@@ -103,7 +119,9 @@
             <a [##_prev_page_##] class="[##_no_more_prev_##]">◀ PREV </a>
             <span class="numbox">
               <s_paging_rep>
-                <a [##_paging_rep_link_##] class="num">[[##_paging_rep_link_num_##]]</a>
+                <a [##_paging_rep_link_##] class="num"
+                  >[[##_paging_rep_link_num_##]]</a
+                >
               </s_paging_rep>
             </span>
             <a [##_next_page_##] class="[##_no_more_next_##]">NEXT ▶</a>
@@ -112,20 +130,21 @@
 
         <!-- 글 상세 -->
         <s_article_rep>
-        <s_permalink_article_rep>
+          <s_permalink_article_rep>
             <div class="titleWrap">
-              <h2><a href="[##_article_rep_link_##]">[##_article_rep_title_##]</a></h2>
+              <h2>
+                <a href="[##_article_rep_link_##]">[##_article_rep_title_##]</a>
+              </h2>
               <div class="category">
-                <a href="[##_article_rep_category_link_##]">[##_article_rep_category_##]</a>
+                <a href="[##_article_rep_category_link_##]"
+                  >[##_article_rep_category_##]</a
+                >
               </div>
               <div class="date">[##_article_rep_date_##]</div>
             </div>
-          
-            <div class="article">
-              [##_article_rep_desc_##]
-            </div>
-        </s_permalink_article_rep>
-      </s_article_rep>
+            <div class="article">[##_article_rep_desc_##]</div>
+          </s_permalink_article_rep>
+        </s_article_rep>
       </main>
     </div>
 
